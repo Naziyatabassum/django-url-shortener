@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortener</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      #page-container {
+        position: relative;
+        min-height: 100vh;
+      }
+      #content-wrap {
+        padding-bottom: 60px; /* Footer height */
+      }
+      .navbar {
+        background-color: #f8f9fa;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .btn-info {
+        background-color: #17a2b8;
+        color: white;
+      }
+      .btn-info:hover {
+        background-color: #138496;
+      }
+      .btn-dark {
+        background-color: #343a40;
+        color: white;
+      }
+      .btn-dark:hover {
+        background-color: #23272b;
+      }
+      #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #e9ecef;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <nav class="navbar">
+          <a href="/"
+            ><button type="button" class="btn btn-info">Home</button></a
+          >
+          <a href="/create/"
+            ><button type="button" class="btn btn-dark">
+              Create New URL
+            </button></a
+          >
+        </nav>
+
+        {% block content %} {% endblock content %}
+      </div>
+      <footer id="footer">
+        <center>
+          <h4>&copy URLshortner 2024</h4>
+        </center>
+      </footer>
+    </div>
+  </body>
+</html>

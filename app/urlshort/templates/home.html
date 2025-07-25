@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    #content-wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .navbar {
+        flex-shrink: 0;
+    }
+    .centered-content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .jumbotron {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+        
+    }
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5vw;
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 1vw;
+    }
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+    #footer {
+        flex-shrink: 0;
+    }
+</style>
+
+<div class="centered-content">
+    <div class="jumbotron">
+        <h1>URLShort Url Shortener</h1>
+        <a href="/create/">
+            <button type="button" class="btn btn-secondary">
+                Create New URL
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock content %}

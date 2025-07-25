@@ -1,0 +1,16 @@
+# Ignore virtual environment
+space/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore SQLite DB (optional if you want a fresh start)
+db.sqlite3
+
+# Ignore migrations (optional)
+*.pyc
+*.pyo
+
+# Ignore environment settings
+*.env
